@@ -66,7 +66,7 @@ const AxiosContext = createContext<AxiosContextData | undefined>(undefined);
  * @returns {JSX.Element} The context provider component. 🎉
  */
 export function AxiosProvider({ instance, children }: AxiosProviderProps): React.ReactElement {
-  const [axiosInstance, setAxiosInstance] = useState<AxiosInstance>(instance);
+  const [axiosInstance, setAxiosInstance] = useState<AxiosInstance>(() => instance);
 
   /**
    * Replaces the current Axios instance with a new one.
