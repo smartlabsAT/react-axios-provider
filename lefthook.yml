@@ -1,0 +1,11 @@
+pre-commit:
+  parallel: false
+  commands:
+    lint:
+      run: pnpm lint-staged
+    typecheck:
+      run: pnpm tsc
+    build:
+      run: pnpm build
+    test:
+      run: pnpm test:ci

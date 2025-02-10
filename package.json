@@ -1,0 +1,99 @@
+{
+  "name": "react-axios-provider",
+  "description": "A minimalist yet powerful React context provider that supplies a configurable **Axios instance**",
+  "version": "1.0.1",
+  "author": "Christopher Schwarz",
+  "license": "MIT",
+  "keywords": [
+    "axios",
+    "react",
+    "provider",
+    "context"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "lint": "eslint src --fix",
+    "lint:ci": "eslint src --debug",
+    "format": "prettier --write src",
+    "test": "vitest",
+    "test:ci": "vitest run --coverage",
+    "commit": "cz",
+    "release": "pnpm build && pnpm release-it",
+    "link:self": "pnpm link --global",
+    "prepare": "lefthook install"
+  },
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/@ryansonshine/cz-conventional-changelog"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,json,md}": [
+      "prettier --write",
+      "eslint --fix"
+    ]
+  },
+  "release-it": {
+    "git": {
+      "commitMessage": "chore(release): v${version}"
+    },
+    "github": {
+      "release": true
+    },
+    "npm": {
+      "publish": false
+    }
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.20.0",
+    "@ryansonshine/commitizen": "4.2.8",
+    "@ryansonshine/cz-conventional-changelog": "3.3.4",
+    "@testing-library/jest-dom": "6.6.3",
+    "@testing-library/react": "^16.1.0",
+    "@types/node": "22.10.5",
+    "@types/react": "18.3.13",
+    "@types/react-dom": "18.3.1",
+    "@types/react-test-renderer": "18.3.0",
+    "@types/testing-library__jest-dom": "^5.14.9",
+    "@vitest/coverage-v8": "2.1.8",
+    "axios-mock-adapter": "^2.1.0",
+    "concurrently": "9.1.2",
+    "eslint": "^9.20.0",
+    "eslint-plugin-react": "^7.37.4",
+    "globals": "^15.14.0",
+    "husky": "^9.1.7",
+    "jsdom": "25.0.1",
+    "lefthook": "1.10.1",
+    "lint-staged": "^15.4.3",
+    "prettier": "^3.5.0",
+    "prop-types": "15.8.1",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "release-it": "17.11.0",
+    "ts-node": "10.9.2",
+    "tsconfig-paths": "4.2.0",
+    "tsup": "8.3.5",
+    "tsx": "4.19.2",
+    "typescript": "5.7.2",
+    "typescript-eslint": "^8.23.0",
+    "vitest": "^2.1.8"
+  },
+  "peerDependencies": {
+    "axios": "^1.5.1",
+    "react": ">=17",
+    "react-dom": ">=17"
+  }
+}
