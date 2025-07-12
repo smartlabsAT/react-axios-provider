@@ -1,7 +1,7 @@
 {
   "name": "react-axios-provider",
   "description": "A minimalist yet powerful React context provider that supplies a configurable **Axios instance**",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "author": "Christopher Schwarz",
   "license": "MIT",
   "keywords": [

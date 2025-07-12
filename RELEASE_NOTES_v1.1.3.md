@@ -1,4 +1,4 @@
-# Release Notes - v1.1.2
+# Release Notes - v1.1.3
 
 ## 🔒 Security Update
 
@@ -32,7 +32,7 @@ None - This is a backward-compatible patch release.
 Simply update your package.json:
 
 ```json
-"react-axios-provider": "^1.1.2"
+"react-axios-provider": "^1.1.3"
 ```
 
 And ensure your axios version is at least 1.8.2:
