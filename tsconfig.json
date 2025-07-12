@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "target": "ES2022",
     "esModuleInterop": true,
     "jsx": "react-jsx",
     "module": "ESNext",
@@ -8,11 +9,12 @@
     "strict": true,
     "noEmit": true,
     "lib": [
-      "decorators",
-      "dom",
-      "es5",
-      "scripthost",
-      "es2015.promise"
-    ]
+      "ES2022",
+      "DOM",
+      "DOM.Iterable"
+    ],
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true
   }
 }

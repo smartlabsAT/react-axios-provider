@@ -32,3 +32,8 @@ yarn-error.log*
 .env.production.local
 
 storybook-static
+
+# Claude AI files
+CLAUDE.md
+.claude/
+*claude*.md

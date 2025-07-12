@@ -15,10 +15,22 @@ A flexible React Context provider for managing Axios instances throughout your a
 
 
 
+## 📋 Requirements
+
+- React >=17
+- Axios ^1.8.2
+- Node.js >=18.0.0
+
 ## Installation 📦
 
 ```bash
 npm install react-axios-provider
+```
+
+or with pnpm:
+
+```bash
+pnpm add react-axios-provider
 ```
 
 
@@ -31,7 +43,7 @@ First, wrap your application (or a part of it) with the `AxiosProvider`:
 
 ```tsx
 import axios from 'axios';
-import { AxiosProvider } from './AxiosProvider';
+import { AxiosProvider } from 'react-axios-provider';
 
 // Create your Axios instance
 const axiosInstance = axios.create({
@@ -53,7 +65,7 @@ function App() {
 Access the Axios instance in your components using the `useAxiosContext` hook:
 
 ```tsx
-import { useAxiosContext } from './AxiosProvider';
+import { useAxiosContext } from 'react-axios-provider';
 
 function UserProfile() {
   const { axios } = useAxiosContext();
