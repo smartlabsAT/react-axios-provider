@@ -5,6 +5,21 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.3.0] - 2026-05-27
+
+### Changed
+- TypeScript 5.9 → 6.0.3
+- ESLint 9 → 10.4 with @eslint-react/eslint-plugin (replaces eslint-plugin-react)
+- Vitest 3 → 4.1.7 with Vite 8 as peer dependency
+- jsdom 26 → 29.1.1, lefthook 1 → 2.1.8, release-it 19 → 20.0.1
+- @types/node 24 → 25.9.1, React 19.1 → 19.2.6, Axios 1.12 → 1.16.1
+- tsup 8.5.0 → 8.5.1, prettier 3.6 → 3.8.3, tsx 4.20 → 4.22.3
+
+### Removed
+- eslint-plugin-react (incompatible with ESLint 10)
+- prop-types (unused)
+- package-lock.json (project uses pnpm)
+
 ## [1.2.2] - 2025-01-25
 
 ### Changed
