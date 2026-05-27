@@ -17,7 +17,7 @@ A flexible React Context provider for managing Axios instances throughout your a
 
 ## 📋 Requirements
 
-- React >=17
+- React >=18
 - Axios ^1.8.2
 - Node.js >=18.0.0
 

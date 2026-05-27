@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "ignoreDeprecations": "6.0", // tsup DTS builder internally sets baseUrl
     "target": "ES2022",
     "esModuleInterop": true,
     "jsx": "react-jsx",
