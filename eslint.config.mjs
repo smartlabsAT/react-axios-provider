@@ -1,7 +1,7 @@
 import globals from 'globals';
 import pluginJs from '@eslint/js';
 import tseslint from 'typescript-eslint';
-import pluginReact from 'eslint-plugin-react';
+import eslintReact from '@eslint-react/eslint-plugin';
 
 /** @type {import('eslint').Linter.Config[]} */
 export default [
@@ -17,12 +17,11 @@ export default [
   },
   pluginJs.configs.recommended,
   ...tseslint.configs.recommended,
-  pluginReact.configs.flat.recommended,
+  eslintReact.configs['recommended-typescript'],
   {
-    settings: {
-      react: {
-        version: 'detect',
-      },
+    rules: {
+      '@eslint-react/no-context-provider': 'off', // peerDep react >=18
+      '@eslint-react/no-use-context': 'off', // peerDep react >=18
     },
   },
 ];
